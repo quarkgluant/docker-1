@@ -1,0 +1,6 @@
+#!/bin/bash
+# Récupérer l’adresse IP interne du container overlord sans lancer son shell et en
+# une commande.
+# docker port overlord
+# docker inspect overlord | grep IPAddress
+docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' overlord

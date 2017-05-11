@@ -1,0 +1,4 @@
+#!/bin/bash
+# Créer un réseau interne de type overlay que vous nommerez overmind.
+docker network create --internal -d overlay overmind
+# -d = --driver

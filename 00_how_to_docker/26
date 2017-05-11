@@ -1,0 +1,6 @@
+#!/bin/bash
+# Lancer un service 42school/engineering-bay en 2 répliques et faire en sorte que
+# le service fonctionne (se référer à la doc fournie dans hub.docker.com). Ce service
+# s’appellera engineering-bay et sera sur le reseau overmind
+docker service create --name engineering-bay --network overmind \
+ 	 --replicas 2 -e OC_USERNAME=rabbit -e OC_PASSWD=rabbit 42school/engineering-bay

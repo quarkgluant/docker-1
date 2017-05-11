@@ -1,0 +1,7 @@
+#!/bin/bash
+# Récuperer les logs en continu d’une des tasks du service engineering-bay
+docker-machine ssh Char
+docker service logs --follow engineering-bay
+# ou sinon, puisque le premier ne marche pas
+docker ps
+docker logs --follow engineering-bay.1.qc2l8k9tfqv7gbim2ne3wk2btonly

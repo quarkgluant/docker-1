@@ -1,0 +1,6 @@
+#!/bin/bash
+# Lancer un container phpmyadmin en tâche de fond. Le container doit avoir pour
+# nom roach-warden, le port 80 du container doit etre bindé au port 8081 de la
+# machine virtuelle et doit pouvoir faire en sorte d’aller explorer la base de données
+# contenue dans le container spawning-pool.
+docker run -d -p 8081:80 --name roach-warden --link spawning-pool:db phpmyadmin/phpmyadmin

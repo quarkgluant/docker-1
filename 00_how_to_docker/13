@@ -1,0 +1,4 @@
+#!/bin/bash
+# Afficher les variables d’environnement du container spawning-pool en une seule
+# commande, histoire d’être sûr que vous avez bien configuré votre container.
+docker inspect --format='{{.Config.Env}}' spawning-pool 

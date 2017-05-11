@@ -1,0 +1,7 @@
+#!/bin/bash
+# Forcer l’arrêt et supprimer l’ensemble des containers (tous états confondus), en
+# une seule commande
+docker ps -a
+docker rm --force Abathur roach-warden lair spawning-pool epic_mcnulty overlord elated_panini
+# ou
+docker ps -a | grep -v 'COMMAND' | awk '{print $1}' | xargs docker rm --force

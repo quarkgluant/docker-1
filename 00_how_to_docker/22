@@ -1,0 +1,7 @@
+#!/bin/bash
+# Basculer Aiur comme esclave du swarm local où Char est leader (La commande
+# de prise de contrôle de Aiur n’est pas demandée).
+docker-machine ssh Aiur
+docker swarm join \
+	--token SWMTKN-1-3xbp817tqqyl9zucombln6327fh98t3hj3dapw1ssx7wk2hsvz-3n6z9gtgjdz325zdzl5fj29j2 \
+	192.168.99.100:2377

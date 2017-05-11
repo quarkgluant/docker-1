@@ -1,0 +1,4 @@
+#!/bin/bash
+# Créer un volume hatchery
+# docker run -v /hatchery: –name hatchery 
+docker volume create hatchery

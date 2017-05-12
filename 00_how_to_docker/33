@@ -8,3 +8,5 @@ docker-machine restart Char
 docker rmi -f nom_des_images
 # ou
 docker images -a | awk '{print $3}' | grep -v "CONT" | xargs  docker rmi -f 
+# ou
+docker rmi $(docker images ls)

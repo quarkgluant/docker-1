@@ -5,3 +5,5 @@ docker ps -a
 docker rm --force Abathur roach-warden lair spawning-pool epic_mcnulty overlord elated_panini
 # ou
 docker ps -a | grep -v 'COMMAND' | awk '{print $1}' | xargs docker rm --force
+# ou
+docker rm --force $(docker ps -a -q)

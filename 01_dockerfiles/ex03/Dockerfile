@@ -10,5 +10,5 @@ RUN apt-get update && apt-get install -y libpam0g-dev &&\
 	git clone --depth=1 -b develop https://github.com/gogits/gogs.git &&\
 	cd gogs && go get ./... && go build 
 WORKDIR /go/src/github.com/gogits/gogs
-EXPOSE 3000
+EXPOSE 3000 22
 CMD ./gogs web

@@ -1,6 +1,6 @@
 FROM ruby
 LABEL maintainer  Patrice CADIOT <pathibul.r@gmail.com>
-
+RUN gem install rails
 ADD . /opt/app
 
 EXPOSE 3000

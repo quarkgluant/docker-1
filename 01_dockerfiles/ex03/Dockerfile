@@ -11,9 +11,8 @@ RUN apt-get update && apt-get install -y libpam0g-dev sqlite3 &&\
 	cd gogs && go get -u -tags "sqlite" github.com/gogits/gogs &&\
 	adduser --disabled-login --gecos 'Gogs' git &&\
 	chown -R git:git /go/src/github.com/gogits/gogs &&\
-	chown -R git:git /home/git &&\
 	go get ./... && go build -tags "sqlite"
 WORKDIR /go/src/github.com/gogits/gogs
 EXPOSE 3000 22
-# USER git
+
 CMD su git -c "./gogs web"

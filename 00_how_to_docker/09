@@ -4,6 +4,9 @@
 # un repo git (en veillant avant de bien mettre à jour le gestionnaire de paquets et
 # les paquets présents de base dans le container). Seules les commandes à effectuer
 # dans le container sont demandées pour cet exercice.
+
+# on lance un container debain avec 
+#  docker run -it --rm --name test-gcc debian
 apt-get update
 apt-get upgrade -y 
-apt-get install -y gcc git
+apt-get install -y gcc git 

@@ -14,7 +14,7 @@ pip install Flask
 apt-get update
 apt-get install -y vim
 # dans vim
-# créer app.py
+# créer app.py dans ~/root
 from flask import Flask
 @app.route('/')
 def index():
@@ -24,4 +24,4 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0")
 
 # puis lancer
-python app.py
+python /root/app.py

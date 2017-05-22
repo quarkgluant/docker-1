@@ -51,4 +51,6 @@ CMD /opt/teamspeak/ts3server_minimal_runscript.sh start
 # USER   teamspeak
 # WORKDIR /opt/teamspeak
 # CMD ./ts3server_minimal_runscript.sh inifile=ts3server.ini start
+
+#  pour tester
 # docker run  -d --publish=9987:9987/udp --publish=30033:30033/tcp --publish=10011:10011/tcp --name teamspeakprout teamspeak

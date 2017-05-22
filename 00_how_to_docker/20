@@ -1,9 +1,14 @@
 #!/bin/bash
 # Créer un swarm local où la machine virtuelle Char en est le manager
+# on récupère l'ip de Char
 addr=$(docker-machine ip Char)
 eval "$(docker-machine env Char)"
+# on se connecte en ssh à Char
 docker-machine ssh Char
+# et on crée le swarm local, en rentrant l'adresse récupéré au début
 docker swarm init --advertise-addr <$addr>
+# et voici la sortie
+#
 # Swarm initialized: current node (h6fr1dhm26kq7m71b7oh3gnsn) is now a manager.
 
 # To add a worker to this swarm, run the following command:

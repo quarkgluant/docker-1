@@ -1,6 +1,7 @@
 #!/bin/bash
 # Supprimer l’ensemble des images de containers stocké sur la machine virtuelle
 # Char, en une seule commande aussi.
+# première méthode, on se connecte sur Char et on efface les fichiers des containers
 docker-machine ssh Char
 sudo rm -rf /var/lib/docker/containers/
 docker-machine restart Char
@@ -8,5 +9,5 @@ docker-machine restart Char
 docker rmi -f nom_des_images
 # ou
 docker images -a | awk '{print $3}' | grep -v "CONT" | xargs  docker rmi -f 
-# ou
+# ou, ma préférée
 docker rmi $(docker images ls)

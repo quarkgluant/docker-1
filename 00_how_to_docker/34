@@ -1,4 +1,4 @@
 #!/bin/bash
 # Supprimer la machine virtuelle Aiur autrement qu’avec un rm -rf
-docker-machine rm -fy Aiur
+docker-machine rm -f Aiur
 # ou lancer virtualBox et supprimer la machine avec le menu

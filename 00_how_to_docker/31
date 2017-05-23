@@ -1,6 +1,6 @@
 #!/bin/bash
 # Forcer l’arrêt et supprimer l’ensemble des services sur le swarm local, en une seule
 # commande
-docker service rm marines engineering-bay orbital-command
+# docker service rm marines engineering-bay orbital-command
 # ou
-docker service rm $(docker services ls)
+docker service rm $(docker service ls -q)

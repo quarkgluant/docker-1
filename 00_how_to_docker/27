@@ -7,4 +7,4 @@
 # on récupère le nom exact du service avec
 docker ps
 # et on utilise docker logs --follow nom_du_service
-docker logs --follow engineering-bay.1.qc2l8k9tfqv7gbim2ne3wk2btonly
+docker logs --follow $(docker ps | grep engineering-bay | awk '{print $1}')

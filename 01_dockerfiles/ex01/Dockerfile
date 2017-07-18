@@ -8,14 +8,16 @@
 FROM debian
 LABEL maintainer Patrice CADIOT <pathibul.r@gmail.com>
 
+# ATTENTION ADD dezippe automatiquement, donc on peut virer le tar ou forcer la copie avec la ligne suivante
+# ADD http://dl.4players.de/ts/releases/3.0.13.6/teamspeak3-server_linux_amd64-3.0.13.6.tar.bz2 teamspeak3-server_linux_amd64-3.0.13.6.tar.bz2
 ADD http://dl.4players.de/ts/releases/3.0.13.6/teamspeak3-server_linux_amd64-3.0.13.6.tar.bz2 ./
 
 RUN export DEBIAN_FRONTEND=noninteractive \
   && apt-get update \
   && apt-get upgrade -y\
   && apt-get install -y apt-utils bzip2 \
-  && tar xjf teamspeak3-server_linux_amd64-3.0.13.6.tar.bz2 \
-  && rm teamspeak3-server_linux_amd64-3.0.13.6.tar.bz2 \
+  # && tar xjf teamspeak3-server_linux_amd64-3.0.13.6.tar.bz2 \
+  # && rm teamspeak3-server_linux_amd64-3.0.13.6.tar.bz2 \
   && mv teamspeak3-server_linux_amd64 /opt/teamspeak
 
 RUN useradd teamspeak && mkdir -p /opt/teamspeak/data && chown teamspeak:teamspeak /opt/teamspeak/data

@@ -10,4 +10,4 @@
 # # ou
 # docker images -a | awk '{print $3}' | grep -v "CONT" | xargs  docker rmi -f 
 # # ou, ma préférée
-docker rmi $(docker images ls -q)
+docker rmi -f $(docker images  -a -q)

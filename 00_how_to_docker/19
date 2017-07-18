@@ -8,7 +8,7 @@
 # Vous testerez la bonne mise en place de votre container, en accédant via curl ou
 # navigateur web,à l’adresse IP de votre machine virtuelle sur le port 3000.
 # Vous listerez aussi toutes les commandes nécessaires dans votre rendu.
-mkdir -p ~/root
+# mkdir -p ~/root
 docker run -it --name Abathur -v ~/root:/root -p 3000:3000 python:2-slim bash
 # dans le container (réponse demandée)
 # pip install Flask
